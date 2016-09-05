@@ -1,6 +1,7 @@
 package com.kyc.incentives;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -29,4 +30,7 @@ public class BaseModel implements Serializable {
 	@Column(name="ID", nullable=false, insertable=true, updatable=false)
 	private Long id;
 
+	@Column(name="CREATE_DATE", nullable=false, insertable=true, updatable=false)
+	private Date createDate = new Date();
+	
 }
