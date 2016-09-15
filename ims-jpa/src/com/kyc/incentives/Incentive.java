@@ -10,6 +10,7 @@ import com.kyc.incentives.enums.Duration;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * Entity implementation class for Entity: Incentive
@@ -18,6 +19,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ToString
 public class Incentive extends BaseModel {
 	
 	private static final long serialVersionUID = -8656313905250314007L;
