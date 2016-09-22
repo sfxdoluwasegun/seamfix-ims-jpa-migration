@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package com.kyc.incentives;
 
 import javax.persistence.Column;
@@ -7,39 +10,28 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.kyc.incentives.enums.Duration;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 /**
- * Entity implementation class for Entity: Incentive
+ * @author dawuzi
  *
  */
 @Entity
 @Getter
 @Setter
 @ToString
-@Table(name = "INCENTIVE")
-public class Incentive extends BaseModel {
+@Table(name = "APP_USER")
+public class AppUser extends BaseModel {
 	
-	private static final long serialVersionUID = -8656313905250314007L;
-	
-	@Column(name="NAME")
-	private String name;
-	
-	@Column(name="AMOUNT")
-	private double amount;
-	
-	@Column(name="FREQUENCY")
-	private Duration frequency; 
+	private static final long serialVersionUID = -6897079440518802680L;
 
-	@Column(name="INCENTIVE_CLASS", nullable = false)
-	private String incentiveClass;
+    @Column(name = "ORBITA_ID")
+	private long orbitaId;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="APP_USER_ROLE_FK", nullable=false)
 	private ImsRole role;
-
+	
 }
