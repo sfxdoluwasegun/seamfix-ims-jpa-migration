@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-	<persistence-unit name="ims-jpa">
-		<class>com.kyc.incentives.Agent</class>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="" transaction-type="RESOURCE_LOCAL">
+		<non-jta-data-source>java:/comp/env/jdbc/ImsDatasource</non-jta-data-source>
 		<class>com.kyc.incentives.Activity</class>
+		<class>com.kyc.incentives.AppUser</class>
+		<class>com.kyc.incentives.ApprovalChain</class>
+		<class>com.kyc.incentives.ApprovalChainLevel</class>
+		<class>com.kyc.incentives.BaseModel</class>
+		<class>com.kyc.incentives.ImsRole</class>
 		<class>com.kyc.incentives.Incentive</class>
-		<class>com.kyc.incentives.SandD</class>
-		<class>com.kyc.incentives.SraaDealer</class>
-		<class>com.kyc.incentives.ValidationRecord</class>
-		<class>com.kyc.incentives.Target</class>
+		<class>com.kyc.incentives.IncentiveTriggerHistory</class>
+		<class>com.kyc.incentives.IncentiveUserTriggerHistory</class>
+		<class>com.kyc.incentives.Setting</class>
+
+
+		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+		<properties>
+			<!-- Configuring JDBC properties -->
+			<property name="hibernate.cache.use_second_level_cache" value="true" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.auditable" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<!-- <property name="hibernate.hbm2ddl.auto" value="validate" /> -->
+
+			<!-- Configuring Connection Pool -->
+			<property name="hibernate.c3p0.min_size" value="5" />
+			<property name="hibernate.c3p0.max_size" value="50" />
+			<property name="hibernate.c3p0.timeout" value="40000" />
+			<property name="hibernate.c3p0.max_statements" value="1000" />
+			<property name="hibernate.c3p0.idle_test_period" value="30000" />
+
+		</properties>
+
+
 	</persistence-unit>
 </persistence>

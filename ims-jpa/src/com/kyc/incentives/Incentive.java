@@ -2,6 +2,9 @@ package com.kyc.incentives;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.kyc.incentives.enums.Duration;
@@ -34,5 +37,8 @@ public class Incentive extends BaseModel {
 
 	@Column(name="INCENTIVE_CLASS", nullable = false)
 	private String incentiveClass;
-
+	
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="APP_USER_ROLE_FK", nullable=false)
+	private ImsRole role;
 }

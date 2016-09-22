@@ -57,7 +57,7 @@ public class IncentiveUserTriggerHistory extends BaseModel {
 	@Temporal(TemporalType.DATE)
 	private Date startDate;
 
-	@Column(name = "START_DATE", nullable = true)
+	@Column(name = "END_DATE", nullable = true)
 	@Temporal(TemporalType.DATE)
 	private Date endDate;
 

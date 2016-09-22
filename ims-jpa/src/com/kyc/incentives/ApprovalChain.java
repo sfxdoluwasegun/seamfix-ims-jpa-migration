@@ -17,6 +17,7 @@ import com.kyc.incentives.enums.ApprovalChainStatus;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author dawuzi
@@ -25,6 +26,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ToString
 @Table(name = "APPROVAL_CHAIN")
 public class ApprovalChain extends BaseModel {
 

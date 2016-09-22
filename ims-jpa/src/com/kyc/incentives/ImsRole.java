@@ -9,6 +9,7 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author dawuzi
@@ -18,7 +19,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "APP_USER_ROLE")
+@ToString
+@Table(name = "IMS_ROLE")
 public class ImsRole extends BaseModel {
 
 	private static final long serialVersionUID = -5956106329487018691L;

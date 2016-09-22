@@ -16,6 +16,7 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author dawuzi
@@ -24,6 +25,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ToString
 @Table(name = "APPROVAL_CHAIN_LEVEL")
 public class ApprovalChainLevel extends BaseModel {
 
@@ -42,7 +44,7 @@ public class ApprovalChainLevel extends BaseModel {
 	private boolean completed;
     
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name = "APPROVAL_CHAIN_LEVEL_ROLES", 
+	@JoinTable(name = "APPROVAL_CHAIN_LEVEL_ROLE_MAPPER", 
 		joinColumns = {@JoinColumn(name = "APPROVAL_CHAIN_LEVEL_ID", referencedColumnName = "ID", nullable = false)},
 	inverseJoinColumns = {@JoinColumn(name = "ROLE_ID", referencedColumnName = "ID", nullable = false)})
 	private Set<ImsRole> authorizedRoles;
