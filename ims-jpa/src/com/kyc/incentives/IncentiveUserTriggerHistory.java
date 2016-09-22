@@ -41,7 +41,7 @@ public class IncentiveUserTriggerHistory extends BaseModel {
 	private AppUser user;
 
 	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="APP_USER_ROLE_FK", nullable=false)
+	@JoinColumn(name="INCENTIVE_FK", nullable=false)
 	private Incentive incentive;
 
 	@Column(name="AMOUNT", precision = 20, scale = 2)
@@ -76,7 +76,7 @@ public class IncentiveUserTriggerHistory extends BaseModel {
 	@Enumerated(EnumType.STRING)
 	private TriggerHistoryStatus status;
 
-	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="APP_USER_ROLE_FK", nullable=false)
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="TRIGGER_HISTORY_FK", nullable=false)
 	private IncentiveTriggerHistory incentiveTriggerHistory;
 }

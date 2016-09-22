@@ -23,7 +23,7 @@ public class ImsRole extends BaseModel {
 
 	private static final long serialVersionUID = -5956106329487018691L;
 	
-	@Column(name = "NAME", nullable = true)
+	@Column(name = "NAME", nullable = true, unique=true)
 	private String name;
 	
 	@Column(name = "CODE", nullable = true)

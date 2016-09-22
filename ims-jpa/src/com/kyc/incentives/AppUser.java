@@ -27,7 +27,7 @@ public class AppUser extends BaseModel {
 	
 	private static final long serialVersionUID = -6897079440518802680L;
 
-    @Column(name = "ORBITA_ID")
+    @Column(name = "ORBITA_ID", nullable=false, unique=true)
 	private long orbitaId;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
