@@ -17,7 +17,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import com.kyc.incentives.enums.TriggerHistoryStatus;
+import com.kyc.incentives.enums.UserTriggerHistoryStatus;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -74,7 +74,7 @@ public class IncentiveUserTriggerHistory extends BaseModel {
 
 	@Column(name="STATUS")
 	@Enumerated(EnumType.STRING)
-	private TriggerHistoryStatus status;
+	private UserTriggerHistoryStatus status;
 
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="TRIGGER_HISTORY_FK", nullable=false)
