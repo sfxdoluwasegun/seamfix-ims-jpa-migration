@@ -21,17 +21,8 @@ public enum SettingValues {
     public String getDefaultValue() {
         return defaultValue;
     }
-
-    public void setDefaultValue(String defaultValue) {
-        this.defaultValue = defaultValue;
-    }
-
     public String getDefaultDescription() {
         return defaultDescription;
-    }
-
-    public void setDefaultDescription(String defaultDescription) {
-        this.defaultDescription = defaultDescription;
     }
 
 }

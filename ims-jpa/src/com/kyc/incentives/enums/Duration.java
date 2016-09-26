@@ -8,8 +8,18 @@ package com.kyc.incentives.enums;
  *
  */
 public enum Duration {
-	YEAR, 
-	MONTH, 
-	QUARTER,
+	YEAR(12), 
+	MONTH(1), 
+	QUARTER(3),
 	;
+	
+	private Duration(int monthCount){
+		this.monthCount = monthCount;
+	}
+	
+	private int monthCount;
+
+	public int getMonthCount() {
+		return monthCount;
+	}
 }
