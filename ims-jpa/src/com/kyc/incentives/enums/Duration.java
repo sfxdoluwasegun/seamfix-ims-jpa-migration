@@ -8,6 +8,8 @@ package com.kyc.incentives.enums;
  *
  */
 public enum Duration {
-	YEAR, MONTH, DAY
+	YEAR, 
+	MONTH, 
+	QUARTER,
 	;
 }
