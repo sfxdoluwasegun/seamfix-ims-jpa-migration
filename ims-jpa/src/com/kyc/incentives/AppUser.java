@@ -34,6 +34,9 @@ public class AppUser extends BaseModel {
 
     @Column(name = "ORBITA_ID", nullable=false, unique=true)
 	private long orbitaId;
+
+	@Column(name = "EMAIL", nullable = false)
+    private String email;
 	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinTable(name = "APP_USER_ROLE_MAPPER", 
