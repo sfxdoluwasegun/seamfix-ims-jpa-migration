@@ -55,4 +55,7 @@ public class IncentiveTriggerHistory extends BaseModel {
 	@Temporal(TemporalType.DATE)
 	private Date endDate;
 
+	@Column(name = "ACTIVE", nullable = false)
+	private boolean active;
+
 }

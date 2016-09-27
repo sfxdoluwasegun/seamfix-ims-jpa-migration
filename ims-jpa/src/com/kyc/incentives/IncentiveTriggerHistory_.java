@@ -7,7 +7,7 @@ import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2016-09-22T11:45:47.120+0100")
+@Generated(value="Dali", date="2016-09-27T10:24:33.479+0100")
 @StaticMetamodel(IncentiveTriggerHistory.class)
 public class IncentiveTriggerHistory_ extends BaseModel_ {
 	public static volatile SingularAttribute<IncentiveTriggerHistory, AppUser> triggerAgent;
@@ -15,4 +15,5 @@ public class IncentiveTriggerHistory_ extends BaseModel_ {
 	public static volatile SingularAttribute<IncentiveTriggerHistory, TriggerHistoryStatus> status;
 	public static volatile SingularAttribute<IncentiveTriggerHistory, Date> startDate;
 	public static volatile SingularAttribute<IncentiveTriggerHistory, Date> endDate;
+	public static volatile SingularAttribute<IncentiveTriggerHistory, Boolean> active;
 }
