@@ -58,4 +58,8 @@ public class IncentiveTriggerHistory extends BaseModel {
 	@Column(name = "ACTIVE", nullable = false)
 	private boolean active;
 
+	@Column(name = "TRIGGER_TYPE", nullable = false)
+    @Enumerated(EnumType.STRING)
+	private boolean triggerType;
+
 }

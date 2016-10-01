@@ -12,7 +12,8 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -28,6 +29,10 @@ import lombok.ToString;
 @Setter
 @ToString
 @Table(name = "APP_USER")
+@NamedNativeQueries(value = { 
+		@NamedNativeQuery(name = "findByOrbitaId", query = "from AppUser a where a.orbitaId = :orbitaId"),
+		
+})
 public class AppUser extends BaseModel {
 	
 	private static final long serialVersionUID = -6897079440518802680L;
