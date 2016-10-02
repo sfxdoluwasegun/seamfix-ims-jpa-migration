@@ -18,6 +18,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.kyc.incentives.enums.TriggerHistoryStatus;
+import com.kyc.incentives.enums.TriggerType;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -60,6 +61,6 @@ public class IncentiveTriggerHistory extends BaseModel {
 
 	@Column(name = "TRIGGER_TYPE", nullable = false)
     @Enumerated(EnumType.STRING)
-	private boolean triggerType;
+	private TriggerType triggerType;
 
 }
