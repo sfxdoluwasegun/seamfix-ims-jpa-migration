@@ -3,6 +3,7 @@
  */
 package com.kyc.incentives;
 
+import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -16,6 +17,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.kyc.incentives.enums.TargetScheduledPeriod;
 
@@ -37,8 +40,15 @@ public class ScheduledJob extends BaseModel {
 
 	private static final long serialVersionUID = -327687311263501944L;
 	
-	@Column(name="CRON_EXPRESSION", nullable=false)
-	private String cronExpression;
+	@Column(name="name", nullable=false, unique=true)
+	private String name;
+	
+	@Column(name="DAY_OF_MONTH", nullable=false)
+	private int dayOfMonth;
+	
+	@Column(name = "TRIGGER_TIME", nullable = true)
+	@Temporal(TemporalType.TIME)
+	private Date triggerTime;
 	
 	@Column(name="TRIGGER_ALL_INCENTIVES", nullable=false)
 	private boolean triggerAllIncentives;
