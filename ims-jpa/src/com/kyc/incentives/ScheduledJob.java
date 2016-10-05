@@ -67,4 +67,7 @@ public class ScheduledJob extends BaseModel {
     @Enumerated(EnumType.STRING)
 	private TargetScheduledPeriod targetPeriod; 
 
+	@Column(name = "ACTIVE", nullable = false)
+	private boolean active;
+
 }
