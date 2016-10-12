@@ -10,7 +10,7 @@ package com.kyc.incentives.enums;
 public enum TriggerHistoryStatus {
 	SUCCESS,
 	FAILED,
-	PENDING,
+	IN_PROGRESS,
 	INCOMPLETE,
 	;
 }
