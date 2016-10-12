@@ -12,5 +12,7 @@ public enum TriggerHistoryStatus {
 	FAILED,
 	IN_PROGRESS,
 	INCOMPLETE,
+	@Deprecated //use in progress now
+	PENDING,
 	;
 }
