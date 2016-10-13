@@ -54,6 +54,9 @@ public class Incentive extends BaseModel {
 	@Column(name="OPPORTUNITY_LOSS")
 	private boolean opportunityLoss;
 	
+	@Column(name = "ACTIVE", nullable = false)
+	private boolean active = true;
+
 	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH} )
 	@JoinTable(name = "INCENTIVE_ROLE_MAPPER", 
 		joinColumns = {@JoinColumn(name = "INCENTIVE_ID", referencedColumnName = "ID", nullable = false)},
