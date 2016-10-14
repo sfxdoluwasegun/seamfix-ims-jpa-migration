@@ -17,6 +17,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.kyc.incentives.enums.PaymentStatus;
 import com.kyc.incentives.enums.TriggerHistoryStatus;
 import com.kyc.incentives.enums.TriggerType;
 
@@ -62,5 +63,9 @@ public class IncentiveTriggerHistory extends BaseModel {
 	@Column(name = "TRIGGER_TYPE", nullable = false)
     @Enumerated(EnumType.STRING)
 	private TriggerType triggerType;
+
+	@Column(name = "PAYMENT_STATUS", nullable = false)
+    @Enumerated(EnumType.STRING)
+	private PaymentStatus paymentStatus = PaymentStatus.UNPAID;
 
 }
