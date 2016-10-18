@@ -5,11 +5,11 @@ import javax.persistence.metamodel.SetAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2016-10-17T12:01:45.733+0100")
+@Generated(value="Dali", date="2016-10-18T17:58:07.905+0100")
 @StaticMetamodel(AppUser.class)
 public class AppUser_ extends BaseModel_ {
 	public static volatile SingularAttribute<AppUser, Long> orbitaId;
 	public static volatile SingularAttribute<AppUser, String> email;
-	public static volatile SetAttribute<AppUser, ImsRole> roles;
 	public static volatile SingularAttribute<AppUser, String> name;
+	public static volatile SetAttribute<AppUser, ImsRole> roles;
 }
