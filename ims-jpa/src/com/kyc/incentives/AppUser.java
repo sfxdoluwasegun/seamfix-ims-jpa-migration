@@ -42,6 +42,9 @@ public class AppUser extends BaseModel {
 
 	@Column(name = "EMAIL", nullable = false)
     private String email;
+
+	@Column(name = "NAME")
+    private String name;
 	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinTable(name = "APP_USER_ROLE_MAPPER", 
