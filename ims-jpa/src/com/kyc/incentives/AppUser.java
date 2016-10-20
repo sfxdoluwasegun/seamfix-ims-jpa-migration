@@ -37,14 +37,17 @@ public class AppUser extends BaseModel {
 	
 	private static final long serialVersionUID = -6897079440518802680L;
 
-    @Column(name = "ORBITA_ID", nullable=false, unique=true)
-	private long orbitaId;
+    @Column(name = "ORBITA_ID", nullable=true, unique=true)
+	private Long orbitaId;
 
-	@Column(name = "EMAIL", nullable = false)
+	@Column(name = "EMAIL", nullable = true)
     private String email;
 
-	@Column(name = "NAME")
+	@Column(name = "NAME", nullable = true)
     private String name;
+	
+	@Column(name = "REFERENCED_ID", nullable = true)
+	private Long referencedId;
 	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
 	@JoinTable(name = "APP_USER_ROLE_MAPPER", 
