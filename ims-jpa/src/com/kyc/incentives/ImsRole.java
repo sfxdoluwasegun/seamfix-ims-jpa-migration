@@ -31,4 +31,7 @@ public class ImsRole extends BaseModel {
 	@Column(name = "CODE", nullable = true)
 	private String code;
 
+	@Column(name = "REFERENCED_ID", nullable = true)
+	private Long referencedId;
+
 }

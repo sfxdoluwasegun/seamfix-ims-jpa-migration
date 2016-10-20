@@ -42,8 +42,11 @@ public class AppUser extends BaseModel {
 
 	@Column(name = "EMAIL", nullable = false)
     private String email;
+
+	@Column(name = "NAME")
+    private String name;
 	
-	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
 	@JoinTable(name = "APP_USER_ROLE_MAPPER", 
 		joinColumns = {@JoinColumn(name = "APP_USER_ID", referencedColumnName = "ID", nullable = false)},
 	inverseJoinColumns = {@JoinColumn(name = "ROLE_ID", referencedColumnName = "ID", nullable = false)})

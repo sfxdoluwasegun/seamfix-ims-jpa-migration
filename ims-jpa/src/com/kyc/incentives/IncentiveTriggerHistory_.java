@@ -1,5 +1,6 @@
 package com.kyc.incentives;
 
+import com.kyc.incentives.enums.PaymentStatus;
 import com.kyc.incentives.enums.TriggerHistoryStatus;
 import com.kyc.incentives.enums.TriggerType;
 import java.math.BigDecimal;
@@ -8,7 +9,7 @@ import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2016-10-01T21:47:28.562+0100")
+@Generated(value="Dali", date="2016-10-14T14:36:17.860+0100")
 @StaticMetamodel(IncentiveTriggerHistory.class)
 public class IncentiveTriggerHistory_ extends BaseModel_ {
 	public static volatile SingularAttribute<IncentiveTriggerHistory, AppUser> triggerAgent;
@@ -18,4 +19,5 @@ public class IncentiveTriggerHistory_ extends BaseModel_ {
 	public static volatile SingularAttribute<IncentiveTriggerHistory, Date> endDate;
 	public static volatile SingularAttribute<IncentiveTriggerHistory, Boolean> active;
 	public static volatile SingularAttribute<IncentiveTriggerHistory, TriggerType> triggerType;
+	public static volatile SingularAttribute<IncentiveTriggerHistory, PaymentStatus> paymentStatus;
 }
