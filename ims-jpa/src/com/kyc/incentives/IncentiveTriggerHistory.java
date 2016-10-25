@@ -68,4 +68,7 @@ public class IncentiveTriggerHistory extends BaseModel {
     @Enumerated(EnumType.STRING)
 	private PaymentStatus paymentStatus = PaymentStatus.UNPAID;
 
+	@Column(name="NAME", unique=true)
+	private String name;
+	
 }
