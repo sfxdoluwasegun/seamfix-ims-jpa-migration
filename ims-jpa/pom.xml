@@ -111,12 +111,12 @@
 		<repository>
 			<id>deployment</id>
 			<name>Internal Releases</name>
-			<url>http://192.168.2.28:7997/nexus/content/repositories/releases</url>
+			<url>http://singlewindow.seamfix.com:7997/nexus/content/repositories/releases</url>
 		</repository>
 		<snapshotRepository>
 			<id>deployment</id>
 			<name>Internal Releases</name>
-			<url>http://192.168.2.28:7997/nexus/content/repositories/snapshots</url>
+			<url>http://singlewindow.seamfix.com:7997/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>
