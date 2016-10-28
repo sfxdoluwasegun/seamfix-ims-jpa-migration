@@ -6,7 +6,7 @@ import javax.persistence.metamodel.SetAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2016-10-12T12:55:59.187+0100")
+@Generated(value="Dali", date="2016-10-28T10:46:15.487+0100")
 @StaticMetamodel(Incentive.class)
 public class Incentive_ extends BaseModel_ {
 	public static volatile SingularAttribute<Incentive, String> name;
@@ -18,4 +18,5 @@ public class Incentive_ extends BaseModel_ {
 	public static volatile SingularAttribute<Incentive, Boolean> opportunityLoss;
 	public static volatile SingularAttribute<Incentive, Boolean> active;
 	public static volatile SetAttribute<Incentive, ImsRole> targetRoles;
+	public static volatile SingularAttribute<Incentive, AppUser> targetAgent;
 }
