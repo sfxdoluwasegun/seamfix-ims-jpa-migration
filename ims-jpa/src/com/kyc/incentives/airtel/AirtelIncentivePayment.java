@@ -69,6 +69,9 @@ public class AirtelIncentivePayment extends BaseModel {
 	@Column(name="STATE")
 	private String state;
 	
+	@Column(name="MONTH")
+	private String month;
+	
 	@Column(name="TOTAL_RECHARGELESS_REREGISTERED ")
 	private String totalRechargelessReregistered;
 	
