@@ -11,6 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.kyc.incentives.enums.Duration;
@@ -56,6 +57,10 @@ public class Incentive extends BaseModel {
 	
 	@Column(name = "ACTIVE", nullable = false)
 	private boolean active = true;
+	
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="TARGET_AGENT_FK", nullable=true)
+	private AppUser targetAgent;
 
 	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH} )
 	@JoinTable(name = "INCENTIVE_ROLE_MAPPER", 
