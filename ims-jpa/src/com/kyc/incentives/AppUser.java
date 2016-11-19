@@ -62,6 +62,12 @@ public class AppUser extends BaseModel {
 	private boolean bottom;
 	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
+	@JoinTable(name = "APP_USER_UP_LINE_MAPPER", 
+		joinColumns = {@JoinColumn(name = "SELF_USER_ID", referencedColumnName = "ID", nullable = false)},
+	inverseJoinColumns = {@JoinColumn(name = "UP_LINE_USER_ID", referencedColumnName = "ID", nullable = false)})
+	private Set<AppUser> upLineUsers;
+	
+	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
 	@JoinTable(name = "APP_USER_ROLE_MAPPER", 
 		joinColumns = {@JoinColumn(name = "APP_USER_ID", referencedColumnName = "ID", nullable = false)},
 	inverseJoinColumns = {@JoinColumn(name = "ROLE_ID", referencedColumnName = "ID", nullable = false)})

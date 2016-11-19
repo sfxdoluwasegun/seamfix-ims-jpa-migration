@@ -49,19 +49,19 @@ public class AirtelIncentivePayment extends BaseModel {
 	private String dealCode;
 	
 	@Column(name="BAND_100")
-	private String band100;
+	private long band100;
 	
 	@Column(name="BAND_200")
-	private String band200;
+	private long band200;
 	
 	@Column(name="BAND_500")
-	private String band500;
+	private long band500;
 	
 	@Column(name="BAND_1000")
-	private String band1000;
+	private long band1000;
 	
 	@Column(name="POSTPAID_LINES")
-	private String postpaidLines;
+	private long postpaidLines;
 	
 	@Column(name="ZONE")
 	private String zone;
