@@ -73,10 +73,10 @@ public class AirtelIncentivePayment extends BaseModel {
 	private String month;
 	
 	@Column(name="TOTAL_RECHARGELESS_REREGISTERED ")
-	private String totalRechargelessReregistered;
+	private long totalRechargelessReregistered;
 	
 	@Column(name="VARIANCE")
-	private String variance;
+	private long variance;
 	
 	@Column(name="FINAL_PAYOUT")
 	private String finalPayout;
