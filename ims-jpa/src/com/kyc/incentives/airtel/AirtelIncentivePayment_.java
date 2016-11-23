@@ -5,7 +5,7 @@ import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2016-11-15T15:22:45.233+0100")
+@Generated(value="Dali", date="2016-11-23T09:07:16.376+0100")
 @StaticMetamodel(AirtelIncentivePayment.class)
 public class AirtelIncentivePayment_ extends BaseModel_ {
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> dealer;
@@ -22,7 +22,6 @@ public class AirtelIncentivePayment_ extends BaseModel_ {
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> postpaidLines;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> zone;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> state;
-	public static volatile SingularAttribute<AirtelIncentivePayment, String> month;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> totalRechargelessReregistered;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> variance;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> finalPayout;
@@ -33,4 +32,5 @@ public class AirtelIncentivePayment_ extends BaseModel_ {
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> bankKitsForDeduction;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> allOtherKits;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> totalPayout;
+	public static volatile SingularAttribute<AirtelIncentivePayment, String> month;
 }
