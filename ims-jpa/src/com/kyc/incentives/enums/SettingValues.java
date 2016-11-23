@@ -14,6 +14,7 @@ public enum SettingValues {
     IMS_EMAIL_PASSWORD("", "Email password"), 
     IMS_EMAIL_HOST_NAME("", "Email host name"), 
     IMS_EMAIL_PORT("", "Email port"), 
+    EYEBALLING_RECORDS_CATEGORY("FAILED", "Default category of records eligible for eyeballing. FAILED, PASSED, BOTH"),
     ;
 
     SettingValues(String defaultValue, String defaultDescription) {
