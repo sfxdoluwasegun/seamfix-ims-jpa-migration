@@ -12,6 +12,7 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedNativeQueries;
 import javax.persistence.NamedNativeQuery;
 import javax.persistence.Table;
@@ -48,6 +49,23 @@ public class AppUser extends BaseModel {
 	
 	@Column(name = "REFERENCED_ID", nullable = true)
 	private Long referencedId;
+
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="TOP_MOST_UPLINE_USER_FK", nullable=true)
+	private AppUser topMostUpLineUser;
+
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="DIRECT_UPLINE_USER_FK", nullable=true)
+	private AppUser directUpLineUser;
+
+	@Column(name = "BOTTOM", nullable = true)
+	private boolean bottom;
+	
+	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
+	@JoinTable(name = "APP_USER_UP_LINE_MAPPER", 
+		joinColumns = {@JoinColumn(name = "SELF_USER_ID", referencedColumnName = "ID", nullable = false)},
+	inverseJoinColumns = {@JoinColumn(name = "UP_LINE_USER_ID", referencedColumnName = "ID", nullable = false)})
+	private Set<AppUser> upLineUsers;
 	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
 	@JoinTable(name = "APP_USER_ROLE_MAPPER", 
