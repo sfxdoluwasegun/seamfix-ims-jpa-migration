@@ -33,4 +33,5 @@ public class AirtelIncentivePayment_ extends BaseModel_ {
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> bankKitsForDeduction;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> allOtherKits;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> totalPayout;
-}
+	public static volatile SingularAttribute<AirtelIncentivePayment, String> month;
+}
