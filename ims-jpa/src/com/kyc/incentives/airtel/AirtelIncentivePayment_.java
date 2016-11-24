@@ -5,7 +5,7 @@ import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2016-11-24T11:17:14.677+0100")
+@Generated(value="Dali", date="2016-11-24T11:24:40.565+0100")
 @StaticMetamodel(AirtelIncentivePayment.class)
 public class AirtelIncentivePayment_ extends BaseModel_ {
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> fsa;
