@@ -27,7 +27,7 @@ public class AirtelIncentivePayment extends BaseModel {
 
 	private static final long serialVersionUID = 2161901246589069216L;
 	
-	@Column(name="DEALER")
+	@Column(name="DEALER") 
 	private String dealer;
 	
 	@Column(name="FSA")
