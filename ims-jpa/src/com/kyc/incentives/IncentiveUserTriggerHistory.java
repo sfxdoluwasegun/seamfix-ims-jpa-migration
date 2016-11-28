@@ -83,4 +83,7 @@ public class IncentiveUserTriggerHistory extends BaseModel {
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="UP_LINE_USER_FK", nullable=true)
 	private AppUser upLineUser;
+
+	@Column(name = "USER_ROLE", nullable = true)
+	private String role;
 }
