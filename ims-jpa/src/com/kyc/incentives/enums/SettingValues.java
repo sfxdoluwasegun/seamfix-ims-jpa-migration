@@ -15,7 +15,7 @@ public enum SettingValues {
     IMS_EMAIL_HOST_NAME("", "Email host name"), 
     IMS_EMAIL_PORT("", "Email port"), 
     EYEBALLING_RECORDS_CATEGORY("FAILED", "Default category of records eligible for eyeballing. FAILED, PASSED, BOTH"),
-    EYEBALLING_DISAPPROVAL_REASONS("Non White Background/Background cluster, Invalid Address, Fraudulent/Invalid Headshot, Non White Background, No identification for foreign national, Name/face/gender/Age inconsitency", "Comma seperated Record disapproval reasons for eyeballing"),
+    EYEBALLING_DISAPPROVAL_REASONS("Non White Background/Background cluster, Invalid Address, Fraudulent/Invalid Headshot, Non White Background, No identification for foreign national, Name/face/gender/Age inconsitency, Other", "Comma seperated Record disapproval reasons for eyeballing"),
     ;
 
     SettingValues(String defaultValue, String defaultDescription) {
