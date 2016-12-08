@@ -5,7 +5,7 @@ import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2016-11-15T15:22:45.233+0100")
+@Generated(value="Dali", date="2016-11-24T12:03:06.505+0100")
 @StaticMetamodel(AirtelIncentivePayment.class)
 public class AirtelIncentivePayment_ extends BaseModel_ {
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> dealer;
@@ -15,16 +15,16 @@ public class AirtelIncentivePayment_ extends BaseModel_ {
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> vendorType;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> ownership;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> dealCode;
-	public static volatile SingularAttribute<AirtelIncentivePayment, String> band100;
-	public static volatile SingularAttribute<AirtelIncentivePayment, String> band200;
-	public static volatile SingularAttribute<AirtelIncentivePayment, String> band500;
-	public static volatile SingularAttribute<AirtelIncentivePayment, String> band1000;
-	public static volatile SingularAttribute<AirtelIncentivePayment, String> postpaidLines;
+	public static volatile SingularAttribute<AirtelIncentivePayment, Long> band100;
+	public static volatile SingularAttribute<AirtelIncentivePayment, Long> band200;
+	public static volatile SingularAttribute<AirtelIncentivePayment, Long> band500;
+	public static volatile SingularAttribute<AirtelIncentivePayment, Long> band1000;
+	public static volatile SingularAttribute<AirtelIncentivePayment, Long> postpaidLines;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> zone;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> state;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> month;
-	public static volatile SingularAttribute<AirtelIncentivePayment, String> totalRechargelessReregistered;
-	public static volatile SingularAttribute<AirtelIncentivePayment, String> variance;
+	public static volatile SingularAttribute<AirtelIncentivePayment, Long> totalRechargelessReregistered;
+	public static volatile SingularAttribute<AirtelIncentivePayment, Long> variance;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> finalPayout;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> sscaDealCode;
 	public static volatile SingularAttribute<AirtelIncentivePayment, String> sscaBank;

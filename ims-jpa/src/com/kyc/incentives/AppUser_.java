@@ -12,5 +12,9 @@ public class AppUser_ extends BaseModel_ {
 	public static volatile SingularAttribute<AppUser, String> email;
 	public static volatile SingularAttribute<AppUser, String> name;
 	public static volatile SingularAttribute<AppUser, Long> referencedId;
+	public static volatile SingularAttribute<AppUser, AppUser> topMostUpLineUser;
+	public static volatile SingularAttribute<AppUser, AppUser> directUpLineUser;
+	public static volatile SingularAttribute<AppUser, Boolean> bottom;
+	public static volatile SetAttribute<AppUser, AppUser> upLineUsers;
 	public static volatile SetAttribute<AppUser, ImsRole> roles;
-}
+}
