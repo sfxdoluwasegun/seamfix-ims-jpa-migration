@@ -38,7 +38,7 @@ public class AppUser extends BaseModel {
 	
 	private static final long serialVersionUID = -6897079440518802680L;
 
-    @Column(name = "ORBITA_ID", nullable=true, unique=true)
+    @Column(name = "ORBITA_ID")
 	private Long orbitaId;
 
 	@Column(name = "EMAIL", nullable = true)
