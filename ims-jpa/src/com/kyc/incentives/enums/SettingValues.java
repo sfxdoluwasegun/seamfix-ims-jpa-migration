@@ -16,6 +16,7 @@ public enum SettingValues {
     IMS_EMAIL_PORT("", "Email port"), 
     EYEBALLING_RECORDS_CATEGORY("FAILED", "Default category of records eligible for eyeballing. FAILED, PASSED, BOTH"),
     EYEBALLING_DISAPPROVAL_REASONS("Non White Background/Background cluster, Invalid Address, Fraudulent/Invalid Headshot, Non White Background, No identification for foreign national, Name/face/gender/Age inconsitency, Other", "Comma seperated Record disapproval reasons for eyeballing"),
+    SEARCH_REJECTED_RECORDS_WITH_DISPUTE("FALSE", "Enable search filter for rejected records with disputes"),
     ;
 
     SettingValues(String defaultValue, String defaultDescription) {
